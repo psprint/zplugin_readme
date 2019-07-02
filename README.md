@@ -168,11 +168,13 @@ to call `compinit` only once in `.zshrc`.
 
 # Quick Start
 
-To install, execute:
+The easiest way to install Zplugin is to execute: 
 
 ```zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
 ```
+
+This will install Zplugin in ~/.zplugin/bin. .zshrc will be updated with three lines of code that will be added to the bottom.
 
 Then add some actions (load some plugins) to `~/.zshrc`, at bottom. For example, in order to install
 [trapd00r/LS_COLORS](https://github.com/trapd00r/LS_COLORS), which isn't a Zsh
@@ -243,22 +245,6 @@ zplugin ice pick"async.zsh" src"pure.zsh"; zplugin light sindresorhus/pure
 
 zplugin creinstall %HOME/my_completions  # Handle completions without loading any plugin, see "clist" command
 ```
-
-(No need to add:
-
-```SystemVerilog
-source "$HOME/.zplugin/bin/zplugin.zsh"
-```
-
-because the install script does this.)
-
-Things used in above example config:
-`history-search-multi-word` – multi-term searching of history (bound to Ctrl-R), `zui` – textual-UI library for Zshell,
-see `zui-demo<TAB>`. The `ice` sub-command – add modifiers to following `zplugin load ...` command or other command.
-`notabug` – the site `notabug.org`
-
-Looking for help? See the [Introduction](doc/INTRODUCTION.adoc) and [the
-wiki](https://github.com/zdharma/zplugin/wiki).
 
 # Quick Start Module-Only
 
