@@ -16,6 +16,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 
 - [News](#news)
 - [Getting help](#getting-help)
+- [Additional resources](#additional-resources)
 - [Zplugin](#zplugin)
 - [Quick Start](#quick-start)
 - [Quick Start Module-Only](#quick-start-module-only)
@@ -34,7 +35,6 @@ reports](DONATIONS.md) about what is being done with the money received.
 - [Hint: Extending Git](#hint-extending-git)
 - [Hint: Docker Images (`burst` Scheduler Invocation)](#hint-docker-images-burst-scheduler-invocation)
 - [Hint: Plugin Standard](#hint-plugin-standard)
-- [IRC Channel](#irc-channel)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -125,8 +125,15 @@ Here are the new features and updates added to zplugin in the last 90 days. To s
   - New ice-mod `nocd` – it prevents changing current directory into the plugin's directory
     before evaluating `atinit''`, `atload''` etc. ice-mods.
 
-
 # Getting help
+
+If you need help you can do the following:
+
+- Ask in our subreddit [r/zplugin](https://www.reddit.com/r/zplugin/).
+
+- Ask in our IRC channel. Connect to [chat.freenode.net:6697](ircs://chat.freenode.net:6697/%23zplugin) (SSL) or [chat.freenode.net:6667](irc://chat.freenode.net:6667/%23zplugin) and join #zplugin. Following is a quick access via Webchat [![IRC](https://kiwiirc.com/buttons/chat.freenode.net/zplugin.png)](https://kiwiirc.com/client/chat.freenode.net:+6697/#zplugin)
+
+# Additional resources
 
 Besides the main-knowledge source, i.e. this README, there are subpages that are
 **guides** and also an external web-page:
@@ -134,18 +141,11 @@ Besides the main-knowledge source, i.e. this README, there are subpages that are
  - [INSTALLATION](doc/INSTALLATION.adoc)
  - [INTRODUCTION TO ZPLUGIN](doc/INTRODUCTION.adoc)
  - [Short-narration style WIKI](https://github.com/zdharma/zplugin/wiki)
- - [A subreddit dedicated to Zplugin](https://www.reddit.com/r/zplugin/)
+ - [Gallery of Zplugin Invocations](GALLERY.md)
+ - [Code documentation](zsdoc)
+ - [Zplugin semigraphical dashboard](https://github.com/psprint/zplugin-crasis)
 
 # Zplugin
-
-**NEW**: Zplugin now has pure-Zsh [semigraphical dashboard](https://github.com/psprint/zplugin-crasis)
-which allows to manipulate plugins, snippets, etc.
-
-**NEW**: [Gallery of Zplugin Invocations](GALLERY.md)
-
-**NEW**: **[Short-text style Wiki](https://github.com/zdharma/zplugin/wiki)**
-
-**NEW**: [Code documentation](zsdoc)
 
 Zplugin is an elastic and fast Zshell plugin manager that will allow you to
 install everything from Github and other sites. For example, in order to install
@@ -637,11 +637,6 @@ manager, he only needs to account for this.
 Also, [**there's a document that defines the Zsh Plugin
 Standard**](http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html). Zplugin
 fully supports the standard.
-
-# IRC Channel
-Connect to [chat.freenode.net:6697](ircs://chat.freenode.net:6697/%23zplugin) (SSL) or [chat.freenode.net:6667](irc://chat.freenode.net:6667/%23zplugin) and join #zplugin.
-
-Following is a quick access via Webchat [![IRC](https://kiwiirc.com/buttons/chat.freenode.net/zplugin.png)](https://kiwiirc.com/client/chat.freenode.net:+6697/#zplugin)
 
 [status-badge]: https://travis-ci.org/zdharma/zplugin.svg?branch=master
 [status-link]: https://travis-ci.org/zdharma/zplugin
