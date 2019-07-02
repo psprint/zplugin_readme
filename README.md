@@ -143,6 +143,8 @@ Besides the main-knowledge source, i.e. this README, there are subpages that are
  - [Gallery of Zplugin Invocations](GALLERY.md)
  - [Code documentation](zsdoc)
  - [Zplugin semigraphical dashboard](https://github.com/psprint/zplugin-crasis)
+ - [User configurations](https://github.com/zdharma/zplugin-configs)
+
 
 # Introduction
 
