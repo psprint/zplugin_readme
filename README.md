@@ -150,8 +150,8 @@ Besides the main-knowledge source, i.e. this README, there are subpages that are
 Zplugin is an elastic and fast Zshell plugin manager that will allow you to
 install everything from Github and other sites. 
 
-Zplugin is currently the only plugin manager out there that has **[Turbo
-Mode](https://github.com/zdharma/zplugin#turbo-mode-zsh--53)** which yields **39-50%
+Zplugin is currently the only plugin manager out there that has Turbo
+Mode which yields **39-50%
 faster Zsh startup!**
 
 Zplugin gives **reports** from plugin load describing what aliases, functions,
