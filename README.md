@@ -17,7 +17,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 - [News](#news)
 - [Getting help](#getting-help)
 - [Additional resources](#additional-resources)
-- [Zplugin](#zplugin)
+- [Introduction](#introduction)
 - [Quick Start](#quick-start)
 - [Quick Start Module-Only](#quick-start-module-only)
   - [More On Zplugin Zsh Module](#more-on-zplugin-zsh-module)
@@ -145,10 +145,36 @@ Besides the main-knowledge source, i.e. this README, there are subpages that are
  - [Code documentation](zsdoc)
  - [Zplugin semigraphical dashboard](https://github.com/psprint/zplugin-crasis)
 
-# Zplugin
+# Introduction
 
 Zplugin is an elastic and fast Zshell plugin manager that will allow you to
-install everything from Github and other sites. For example, in order to install
+install everything from Github and other sites. 
+
+Zplugin is currently the only plugin manager out there that has **[Turbo
+Mode](https://github.com/zdharma/zplugin#turbo-mode-zsh--53)** which yields **39-50%
+faster Zsh startup!**
+
+Zplugin gives **reports** from plugin load describing what aliases, functions,
+bindkeys, Zle widgets, zstyles, completions, variables, `PATH` and `FPATH`
+elements a plugin has set up.
+
+Supported is **unloading** of plugin and ability to list, (un)install and
+selectively disable, enable plugin's completions.
+
+The system does not use `$FPATH`, loading multiple plugins doesn't clutter
+`$FPATH` with the same number of entries (e.g. `10`). Code is immune to
+`KSH_ARRAYS`. Completion management functionality is provided to allow user
+to call `compinit` only once in `.zshrc`.
+
+# Quick Start
+
+To install, execute:
+
+```zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
+```
+
+Then add some actions (load some plugins) to `~/.zshrc`, at bottom. For example, in order to install
 [trapd00r/LS_COLORS](https://github.com/trapd00r/LS_COLORS), which isn't a Zsh
 plugin:
 
@@ -171,34 +197,7 @@ zplugin light direnv/direnv
 
 ([explanation](https://github.com/zdharma/zplugin/wiki/Direnv-explanation)).
 
-Zplugin is currently the only plugin manager out there that has **[Turbo
-Mode](https://github.com/zdharma/zplugin#turbo-mode-zsh--53)** which yields **39-50%
-faster Zsh startup!**
-
-Zplugin gives **reports** from plugin load describing what aliases, functions,
-bindkeys, Zle widgets, zstyles, completions, variables, `PATH` and `FPATH`
-elements a plugin has set up.
-
-Supported is **unloading** of plugin and ability to list, (un)install and
-selectively disable, enable plugin's completions.
-
-The system does not use `$FPATH`, loading multiple plugins doesn't clutter
-`$FPATH` with the same number of entries (e.g. `10`). Code is immune to
-`KSH_ARRAYS`. Completion management functionality is provided to allow user
-to call `compinit` only once in `.zshrc`.
-
-Looking for help? See the [Introduction](doc/INTRODUCTION.adoc) and [the
-wiki](https://github.com/zdharma/zplugin/wiki).
-
-# Quick Start
-
-To install, execute:
-
-```zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
-```
-
-Then add some actions (load some plugins) to `~/.zshrc`, at bottom, for example:
+Other examples:
 
 ```zsh
 zplugin load zdharma/history-search-multi-word
