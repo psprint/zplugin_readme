@@ -18,6 +18,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 - [Getting help](#getting-help)
 - [Additional resources](#additional-resources)
 - [Introduction](#introduction)
+- [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Quick Start Module-Only](#quick-start-module-only)
   - [More On Zplugin Zsh Module](#more-on-zplugin-zsh-module)
@@ -137,7 +138,6 @@ If you need help you can do the following:
 Besides the main-knowledge source, i.e. this README, there are subpages that are
 **guides** and also an external web-page:
 
- - [INSTALLATION](doc/INSTALLATION.adoc)
  - [INTRODUCTION TO ZPLUGIN](doc/INTRODUCTION.adoc)
  - [Short-narration style WIKI](https://github.com/zdharma/zplugin/wiki)
  - [Gallery of Zplugin Invocations](GALLERY.md)
@@ -167,7 +167,7 @@ The system does not use `$FPATH`, loading multiple plugins doesn't clutter
 `KSH_ARRAYS`. Completion management functionality is provided to allow user
 to call `compinit` only once in `.zshrc`.
 
-# Quick Start
+# Installation
 
 The easiest way to install Zplugin is to execute: 
 
@@ -176,6 +176,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc
 ```
 
 This will install Zplugin in ~/.zplugin/bin. .zshrc will be updated with three lines of code that will be added to the bottom.
+
+If you're interested in more ways to install Zplugin check [INSTALLATION](doc/INSTALLATION.adoc).
+
+# Quick Start
+
 
 Then add some actions (load some plugins) to `~/.zshrc`, at bottom. For example, in order to install
 [trapd00r/LS_COLORS](https://github.com/trapd00r/LS_COLORS), which isn't a Zsh
@@ -189,7 +194,7 @@ zplugin ice atclone"dircolors -b LS_COLORS > c.zsh" atpull'%atclone' pick"c.zsh"
 zplugin light trapd00r/LS_COLORS
 ```
 
-([explanation](https://github.com/zdharma/zplugin/wiki/LS_COLORS-explanation)). Other example: direnv written in Go, requiring building after cloning:
+([explanation](https://github.com/zdharma/zplugin/wiki/LS_COLORS-explanation)). Another example is direnv written in Go, requiring building after cloning:
 
 ```zsh
 # make'!...' -> run make before atclone & atpull
