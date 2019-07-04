@@ -1,11 +1,3 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Gallery Of Zplugin Invocations](#gallery-of-zplugin-invocations)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Gallery Of Zplugin Invocations
 
 ```zsh
@@ -51,6 +43,7 @@ zplugin ice as"program" pick"$ZPFX/sdkman/bin/sdk" id-as'sdkman' run-atpull \
     atpull"SDKMAN_DIR=$ZPFX/sdkman sdk selfupdate" \
     atinit"export SDKMAN_DIR=$ZPFX/sdkman; source $ZPFX/sdkman/bin/sdkman-init.sh"
 zplugin light zdharma/null
+
 #
 # Completions
 #

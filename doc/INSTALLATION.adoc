@@ -65,3 +65,8 @@ zcompile ~/.zplugin/bin/zplugin.zsh
 Zplugin will compile each newly downloaded plugin. You can clear compilation of
 a plugin by invoking `zplugin uncompile {plugin-spec}`. There are also commands
 `compile`, `compiled` that control the functionality of compiling plugins.
+
+[appendix]
+== Revision history (history of updates to the document)
+v1.01, 03/13/2018: Update the link to README.md / Customizing Paths section +
+v1.00, 03/11/2018: First asciidoc version – 1/ replaced doctoc with :toc: 2/ Intense uplift and verification before commiting +

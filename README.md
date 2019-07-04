@@ -27,6 +27,7 @@ reports](DONATIONS.md) about what is being done with the money received.
     - [Module - Debugging](#module---debugging)
 - [Ice Modifiers](#ice-modifiers)
 - [Usage](#usage)
+    - [Using Oh-My-Zsh Themes](#using-oh-my-zsh-themes)
 - [Calling compinit](#calling-compinit)
   - [Turbo-loading completions & calling compinit](#turbo-loading-completions--calling-compinit)
 - [Ignoring Compdefs](#ignoring-compdefs)
@@ -35,6 +36,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 - [Hint: Extending Git](#hint-extending-git)
 - [Hint: Docker Images (`burst` Scheduler Invocation)](#hint-docker-images-burst-scheduler-invocation)
 - [Hint: Plugin Standard](#hint-plugin-standard)
+- [IRC Channel](#irc-channel)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -410,6 +412,61 @@ Available ice-modifiers:
         nocompletions reset-prompt
 ```
 
+### Using Oh-My-Zsh Themes
+
+To use **themes** created for `Oh-My-Zsh` you might want to first source the `git` library there:
+
+```SystemVerilog
+zplugin snippet http://github.com/robbyrussell/oh-my-zsh/raw/master/lib/git.zsh
+# Or using OMZ:: shorthand:
+zplugin snippet OMZ::lib/git.zsh
+```
+
+If the library will not be loaded, then similar to following errors will be appearing:
+
+```
+........:1: command not found: git_prompt_status
+........:1: command not found: git_prompt_short_sha
+```
+
+Then you can use the themes as snippets (`zplugin snippet {file path or Github URL}`).
+Some themes require not only `Oh-My-Zsh's` Git **library**, but also Git **plugin** (error
+about `current_branch` function can be appearing). Load this Git-plugin as single-file
+snippet directly from OMZ:
+
+```SystemVerilog
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+```
+
+Such lines should be added to `.zshrc`. Snippets are cached locally, use `-f` option to download
+a fresh version of a snippet, or `zplugin update {URL}`. Can also use `zplugin update --all` to
+update all snippets (and plugins).
+
+Most themes require `promptsubst` option (`setopt promptsubst` in `zshrc`), if it isn't set, then
+prompt will appear as something like: `... $(build_prompt) ...`.
+
+You might want to supress completions provided by the git plugin by issuing `zplugin cdclear -q`
+(`-q` is for quiet) – see below **Ignoring Compdefs**.
+
+To summarize:
+
+```SystemVerilog
+# Load OMZ Git library
+zplugin snippet OMZ::lib/git.zsh
+
+# Load Git plugin from OMZ
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin cdclear -q # <- forget completions provided up to this moment
+
+setopt promptsubst
+
+# Load theme from OMZ
+zplugin snippet OMZ::themes/dstufft.zsh-theme
+
+# Load normal Github plugin with theme depending on OMZ Git library
+zplugin light NicoSantangelo/Alpharized
+```
+
 # Calling compinit
 
 With no turbo mode in use, compinit can be called normally, i.e.: as `autoload compinit:
@@ -575,6 +632,11 @@ manager, he only needs to account for this.
 Also, [**there's a document that defines the Zsh Plugin
 Standard**](http://zdharma.org/Zsh-100-Commits-Club/Zsh-Plugin-Standard.html). Zplugin
 fully supports the standard.
+
+# IRC Channel
+Connect to [chat.freenode.net:6697](ircs://chat.freenode.net:6697/%23zplugin) (SSL) or [chat.freenode.net:6667](irc://chat.freenode.net:6667/%23zplugin) and join #zplugin.
+
+Following is a quick access via Webchat [![IRC](https://kiwiirc.com/buttons/chat.freenode.net/zplugin.png)](https://kiwiirc.com/client/chat.freenode.net:+6697/#zplugin)
 
 [status-badge]: https://travis-ci.org/zdharma/zplugin.svg?branch=master
 [status-link]: https://travis-ci.org/zdharma/zplugin
