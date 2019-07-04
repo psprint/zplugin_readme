@@ -44,6 +44,15 @@ reports](DONATIONS.md) about what is being done with the money received.
 
 Here are the new features and updates added to zplugin in the last 90 days. To see the full history check [the changelog.](CHANGELOG.md)
 
+* 02-07-2019
+  - [Cooperation of Fast-Syntax-Highlighting and
+    Zplugin](https://asciinema.org/a/254630) – a new precise highlighting for
+    Zplugin in F-Sy-H.
+
+* 01-07-2019
+  - `atclone''`, `atpull''` & `make''` get run in the same subshell, thus an e.g.
+    export done in `atclone''` will be visible during the `make`.
+
 * 26-06-2019
   - `notify''` contents gets evaluated, i.e. can contain active code like `$(tail -1
     /var/log/messages)`, etc.
