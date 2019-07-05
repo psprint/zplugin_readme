@@ -17,7 +17,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 - [News](#news)
 - [Getting help](#getting-help)
 - [Additional resources](#additional-resources)
-- [Introduction](#introduction)
+- [Zplugin](#zplugin)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Quick Start Module-Only](#quick-start-module-only)
@@ -157,7 +157,7 @@ Besides the main-knowledge source, i.e. this README, there are subpages that are
  - [User configurations](https://github.com/zdharma/zplugin-configs)
 
 
-# Introduction
+# Zplugin
 
 Zplugin is an elastic and fast Zshell plugin manager that will allow you to
 install everything from Github and other sites. 
