@@ -42,7 +42,7 @@ reports](DONATIONS.md) about what is being done with the money received.
 
 # News
 
-Here are the new features and updates added to zplugin in the last 90 days.
+Here are the new features and updates added to zplugin in the last 90 days. To see the full history check [the changelog.](CHANGELOG.md)
 
 * 02-07-2019
   - [Cooperation of Fast-Syntax-Highlighting and
