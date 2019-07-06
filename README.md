@@ -192,8 +192,7 @@ If you're interested in more ways to install Zplugin check [INSTALLATION](doc/IN
 
 # Quick Start
 
-
-Then add some actions (load some plugins) to `~/.zshrc`, at bottom. For example, in order to install
+After installing Zplugin you can start adding some actions (load some plugins) to `~/.zshrc`, at bottom. For example, in order to install
 [trapd00r/LS_COLORS](https://github.com/trapd00r/LS_COLORS), which isn't a Zsh
 plugin:
 
@@ -327,7 +326,7 @@ Following `ice` modifiers are to be passed to `zplugin ice ...` to obtain descri
 | `pick` | Select the file to source, or the file to set as command (when using `snippet --command` or ICE `as"program"`), e.g. `zplugin ice pick"*.plugin.zsh"`. | :white_check_mark: | :white_check_mark: |
 | `bpick` | Used to select which release from Github Releases to download, e.g. `zplg ice from"gh-r" as"program" bpick"*Darwin*"; zplg load docker/compose` | :white_check_mark: | :heavy_multiplication_x: |
 | `depth` | Pass `--depth` to `git`, i.e. limit how much of history to download. | :white_check_mark: | :heavy_multiplication_x: |
-| `cloneopts` | Pass the contents of `cloneopts` to `git clone`. Defaults to `--recursive` i.e. Change cloning options. | :white_check_mark: | :heavy_multiplication_x: |
+| `cloneopts` | Pass the contents of `cloneopts` to `git clone`. Defaults to `--recursive` i.e. change cloning options. | :white_check_mark: | :heavy_multiplication_x: |
 | `bindmap` | To hold `;`-separated strings like `Key(s)A -> Key(s)B`, e.g. `^R -> ^T; ^A -> ^B`. In general, `bindmap''`changes bindings (done with the `bindkey` builtin) the plugin does. The example would cause the plugin to map Ctrl-T instead of Ctrl-R, and Ctrl-B instead of Ctrl-A. | :white_check_mark: | :heavy_multiplication_x: |
 | `trackbinds` | Shadow but only `bindkey` calls even with `zplugin light ...`, i.e. even with tracking disabled (fast loading), to allow `bindmap` to remap the key-binds. The same effect has `zplugin light -b ...`, i.e. additional `-b` option to the `light`-subcommand. | :white_check_mark: | :heavy_multiplication_x: |
 | `if` | Load plugin or snippet only when given condition is fulfilled, for example: `zplugin ice if'[[ -n "$commands[otool]" ]]'; zplugin load ...`. | :white_check_mark: | :white_check_mark: |
